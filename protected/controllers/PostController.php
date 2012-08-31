@@ -1,7 +1,7 @@
 <?php
 
 class PostController extends Controller {
-    public $layout = 'column1';
+    public $layout = 'column2';
 
     /**
      * @var CActiveRecord the currently loaded data model instance.
