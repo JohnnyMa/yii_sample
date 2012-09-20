@@ -15,6 +15,12 @@ class SiteController extends Controller {
         'page' => array('class' => 'CViewAction', ), );
     }
 
+    protected function beforeRender($view) {
+        echo 'override beforeRender...';
+        var_dump($view);
+        return true;
+    }
+
     /**
      * This is the action to handle external exceptions.
      */
@@ -73,6 +79,12 @@ class SiteController extends Controller {
     public function actionLogout() {
         Yii::app() -> user -> logout();
         $this -> redirect(Yii::app() -> homeUrl);
+    }
+
+    public function actionTest() {
+        $client = new SoapClient(Yii::app() -> homeUrl.'/stock/quote');
+        var_dump($client);
+        //echo $client->getPrice('IBM');
     }
 
 }

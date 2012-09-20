@@ -19,7 +19,7 @@ return array(
         'application.components.*',
     ),
 
-    'defaultController'=>'post',
+    'defaultController'=>'stock',
 
     // application components
     'components'=>array(
@@ -57,6 +57,18 @@ return array(
                     // 'levels'=>'error, warning',
                     'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
                     'ipFilters'=>array('127.0.0.1','192.168.1.215'),
+                ),
+                // send log info to email
+                // array(
+                    // 'class'=>'CEmailLogRoute',
+                    // 'levels'=>'error, warning, info',
+                    // 'emails'=>'johnnyma1988@gmail.com'
+                // ),
+                array(
+                    'class'=>'CDbLogRoute',
+                    'levels'=>'error, warning',
+                    'connectionID'=>'tinyblog',
+                    'logTableName'=>'tbl_log',
                 ),
                 // uncomment the following to show log messages on web pages
                 // array(
