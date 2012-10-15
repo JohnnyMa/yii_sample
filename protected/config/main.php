@@ -64,12 +64,12 @@ return array(
                     // 'levels'=>'error, warning, info',
                     // 'emails'=>'johnnyma1988@gmail.com'
                 // ),
-                array(
-                    'class'=>'CDbLogRoute',
-                    'levels'=>'error, warning',
-                    'connectionID'=>'tinyblog',
-                    'logTableName'=>'tbl_log',
-                ),
+                // array(
+                    // 'class'=>'CDbLogRoute',
+                    // 'levels'=>'error, warning',
+                    // 'connectionID'=>'tinyblog',
+                    // 'logTableName'=>'tbl_log',
+                // ),
                 // uncomment the following to show log messages on web pages
                 // array(
                     // 'class'=>'CWebLogRoute',
