@@ -40,6 +40,10 @@ body {
   font-size: 200%;
 }
 
+#logo a {
+  text-decoration: none;
+}
+
 #mainmenu {
   background: white url(bg.gif) repeat-x left top;
 }
@@ -147,6 +151,13 @@ div.breadcrumbs span {
   padding: 5px 8px;
   margin-bottom: 15px;
   background: #EFFDFF;
+}
+
+#banner .portlet-content {
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0px;
+  background: none;
 }
 
 .portlet-content ul {
