@@ -1,0 +1,54 @@
+2012/09/17 02:38:11 [error] [exception.CException] exception 'CException' with message 'Property "SocialList.maxTags" is not defined.' in C:\wamp\www\tinyblog\YiiRoot\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\tinyblog\YiiRoot\web\CWidgetFactory.php(162): CComponent->__set('maxTags', 20)
+#1 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(PostController), 'SocialList', Array)
+#2 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(173): CBaseController->createWidget('SocialList', Array)
+#3 C:\wamp\www\tinyblog\themes\classic\views\layouts\column2.php(17): CBaseController->widget('SocialList', Array)
+#4 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(127): require('C:\wamp\www\tin...')
+#5 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tin...', Array, true)
+#6 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\tin...', Array, true)
+#7 C:\wamp\www\tinyblog\protected\controllers\PostController.php(97): CController->render('index', Array)
+#8 C:\wamp\www\tinyblog\YiiRoot\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#9 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\tinyblog\YiiRoot\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\tinyblog\YiiRoot\web\CWebApplication.php(283): CController->run('')
+#18 C:\wamp\www\tinyblog\YiiRoot\web\CWebApplication.php(142): CWebApplication->runController('')
+#19 C:\wamp\www\tinyblog\YiiRoot\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\tinyblog\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/tinyblog/
+HTTP_REFERER=http://127.0.0.1/
+---
+2012/09/17 02:38:12 [error] [exception.CException] exception 'CException' with message 'Property "SocialList.maxTags" is not defined.' in C:\wamp\www\tinyblog\YiiRoot\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\tinyblog\YiiRoot\web\CWidgetFactory.php(162): CComponent->__set('maxTags', 20)
+#1 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(PostController), 'SocialList', Array)
+#2 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(173): CBaseController->createWidget('SocialList', Array)
+#3 C:\wamp\www\tinyblog\themes\classic\views\layouts\column2.php(17): CBaseController->widget('SocialList', Array)
+#4 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(127): require('C:\wamp\www\tin...')
+#5 C:\wamp\www\tinyblog\YiiRoot\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tin...', Array, true)
+#6 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\tin...', Array, true)
+#7 C:\wamp\www\tinyblog\protected\controllers\PostController.php(97): CController->render('index', Array)
+#8 C:\wamp\www\tinyblog\YiiRoot\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#9 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\tinyblog\YiiRoot\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\tinyblog\YiiRoot\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\tinyblog\YiiRoot\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\tinyblog\YiiRoot\web\CWebApplication.php(283): CController->run('')
+#18 C:\wamp\www\tinyblog\YiiRoot\web\CWebApplication.php(142): CWebApplication->runController('')
+#19 C:\wamp\www\tinyblog\YiiRoot\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\tinyblog\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/tinyblog/
+HTTP_REFERER=http://127.0.0.1/
+---

@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>'Blog Demo',
+    'name'=>'Demo',
     'theme'=>'classic',
 
     // preloading 'log' component
@@ -19,7 +19,7 @@ return array(
         'application.components.*',
     ),
 
-    'defaultController'=>'post',
+    'defaultController'=>'site',
 
     // application components
     'components'=>array(
@@ -34,6 +34,8 @@ return array(
             'password' => '',
             'charset' => 'utf8',
             'tablePrefix' => 'tbl_',
+            'enableProfiling'=>true,
+            'enableParamLogging'=>true,
         ),
         'errorHandler'=>array(
             // use 'site/error' action to display errors
@@ -51,9 +53,23 @@ return array(
             'class'=>'CLogRouter',
             'routes'=>array(
                 array(
-                    'class'=>'CFileLogRoute',
-                    'levels'=>'error, warning',
+                    // 'class'=>'CFileLogRoute',
+                    // 'levels'=>'error, warning',
+                    'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+                    'ipFilters'=>array('127.0.0.1','192.168.1.215'),
                 ),
+                // send log info to email
+                // array(
+                    // 'class'=>'CEmailLogRoute',
+                    // 'levels'=>'error, warning, info',
+                    // 'emails'=>'johnnyma1988@gmail.com'
+                // ),
+                // array(
+                    // 'class'=>'CDbLogRoute',
+                    // 'levels'=>'error, warning',
+                    // 'connectionID'=>'tinyblog',
+                    // 'logTableName'=>'tbl_log',
+                // ),
                 // uncomment the following to show log messages on web pages
                 // array(
                     // 'class'=>'CWebLogRoute',
