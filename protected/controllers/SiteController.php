@@ -16,8 +16,8 @@ class SiteController extends Controller {
     }
 
     protected function beforeRender($view) {
-        echo 'override beforeRender...';
-        var_dump($view);
+        // echo 'override beforeRender...';
+        // var_dump($view);
         return true;
     }
 
@@ -31,6 +31,23 @@ class SiteController extends Controller {
             else
                 $this -> render('error', $error);
         }
+    }
+
+    /**
+     * Displays the index page
+     */
+    public function actionIndex() {
+        $model = new ContactForm;
+        if (isset($_POST['ContactForm'])) {
+            $model -> attributes = $_POST['ContactForm'];
+            if ($model -> validate()) {
+                $headers = "From: {$model->email}\r\nReply-To: {$model->email}";
+                mail(Yii::app() -> params['adminEmail'], $model -> subject, $model -> body, $headers);
+                Yii::app() -> user -> setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                $this -> refresh();
+            }
+        }
+        $this -> render('index', array('model' => $model));
     }
 
     /**
@@ -81,10 +98,10 @@ class SiteController extends Controller {
         $this -> redirect(Yii::app() -> homeUrl);
     }
 
-    public function actionTest() {
-        $client = new SoapClient(Yii::app() -> homeUrl.'/stock/quote');
-        var_dump($client);
-        //echo $client->getPrice('IBM');
-    }
+    // public function actionTest() {
+        // $client = new SoapClient(Yii::app() -> homeUrl.'/stock/quote');
+        // var_dump($client);
+        // //echo $client->getPrice('IBM');
+    // }
 
 }

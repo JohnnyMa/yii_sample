@@ -547,6 +547,15 @@ class YiiBase
     }
 
     /**
+     * Returns a string that can be displayed on your Web page showing Powered-by-Yii information
+     * @return string a string that can be displayed on your Web page showing Powered-by-Yii information
+     */
+    public static function authorLink()
+    {
+        return Yii::t('yii','{yii}.', array('{yii}'=>'<a href="http://johnnyma.github.com/blog/" rel="external">Find me</a>'));
+    }
+
+    /**
      * Translates a message to the specified language.
      * This method supports choice format (see {@link CChoiceFormat}),
      * i.e., the message returned will be chosen from a few candidates according to the given

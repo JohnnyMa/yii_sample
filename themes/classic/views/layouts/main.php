@@ -44,9 +44,10 @@
 	<?php echo $content; ?>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by JohnnyMa.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
+		<?php echo Yii::authorLink(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->
