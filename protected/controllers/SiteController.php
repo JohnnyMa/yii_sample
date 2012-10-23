@@ -50,6 +50,7 @@ class SiteController extends Controller {
      * Displays the contact page
      */
     public function actionContact() {
+        $this->layout = 'column1';
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
             $model -> attributes = $_POST['ContactForm'];
@@ -67,6 +68,7 @@ class SiteController extends Controller {
      * Displays the login page
      */
     public function actionLogin() {
+        $this->layout = 'column1';
         $model = new LoginForm;
 
         // if it is ajax validation request
