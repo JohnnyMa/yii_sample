@@ -37,17 +37,13 @@ class SiteController extends Controller {
      * Displays the index page
      */
     public function actionIndex() {
-        $model = new ContactForm;
-        if (isset($_POST['ContactForm'])) {
-            $model -> attributes = $_POST['ContactForm'];
-            if ($model -> validate()) {
-                $headers = "From: {$model->email}\r\nReply-To: {$model->email}";
-                mail(Yii::app() -> params['adminEmail'], $model -> subject, $model -> body, $headers);
-                Yii::app() -> user -> setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $this -> refresh();
-            }
-        }
-        $this -> render('index', array('model' => $model));
+        $criteria = new CDbCriteria( array('condition' => 'status=' . Post::STATUS_PUBLISHED, 'order' => 'update_time DESC', 'with' => 'commentCount', ));
+        if (isset($_GET['tag']))
+            $criteria -> addSearchCondition('tags', $_GET['tag']);
+
+        $dataProvider = new CActiveDataProvider('Post', array('pagination' => array('pageSize' => Yii::app() -> params['postsPerPage'], ), 'criteria' => $criteria, ));
+
+        $this -> render('index', array('dataProvider' => $dataProvider, ));
     }
 
     /**
