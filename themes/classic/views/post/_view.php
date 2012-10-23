@@ -12,6 +12,7 @@
             $this->endWidget();
         ?>
     </div>
+    <!-- 
     <div class="nav">
         <b>Tags:</b>
         <?php echo implode(', ', $data->tagLinks); ?>
@@ -20,4 +21,5 @@
         <?php echo CHtml::link("Comments ({$data->commentCount})",$data->url.'#comments'); ?> |
         Last updated on <?php echo date('F j, Y',$data->update_time); ?>
     </div>
+    -->
 </div>

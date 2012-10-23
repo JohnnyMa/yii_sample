@@ -17,6 +17,8 @@ return array(
     // the copyright information displayed in the footer section
     'copyrightInfo' => 'Copyright &copy; 2009 by My Company.',
 
+    //specify whether show the banner in homepage
+    'displayBanner' => true,
     //configurations for social widgets
     'displayWeibo' => true,
     'displayQQ' => true,

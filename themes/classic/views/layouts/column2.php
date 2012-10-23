@@ -18,7 +18,6 @@
 
       <?php $this -> widget('RecentComments', array('maxComments' => Yii::app() -> params['recentCommentCount'], )); ?>
 
-      <?php $this -> widget('UserMenu', array()); ?>
     </div><!-- sidebar -->
   </div>
 </div>
