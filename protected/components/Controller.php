@@ -21,8 +21,8 @@ class Controller extends CController {
     public $breadcrumbs = array();
 
     protected function beforeRender($view) {
-        echo 'override beforeRender... in Controller';
-        var_dump($view);
+        // echo 'override beforeRender... in Controller';
+        // var_dump($view);
         return true;
     }
 

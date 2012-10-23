@@ -21,6 +21,17 @@ body {
 
 #content {
   padding: 20px;
+  overflow: hidden;
+}
+
+#content .news_list {
+  float: left;
+  width: 60%;
+}
+
+#content #calendar {
+  float: right;
+  width: 30%;
 }
 
 #sidebar {
