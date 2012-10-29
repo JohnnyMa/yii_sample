@@ -1,8 +1,6 @@
 <?php $this->beginContent('/layouts/main'); ?>
 <div class="container">
-    <?php 
-    echo Yii::app()->params['displayBanner'];
-    if(Yii::app()->params['displayBanner']) : ?>
+    <?php if(Yii::app()->params['displayBanner']) : ?>
     <div id="banner">
         <?php $this -> widget('BannerSlider'); ?>
     </div>

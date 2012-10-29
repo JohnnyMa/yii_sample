@@ -12,7 +12,6 @@
 	<![endif]-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/nivo-slider.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/slider_style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/form.css" />
 
@@ -26,7 +25,11 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this -> widget('zii.widgets.CMenu', array('items' => array( array('label' => 'Home', 'url' => array('site/index')), array('label' => 'News', 'url' => array('post/index')), array('label' => 'Contact', 'url' => array('site/contact')), array('label' => 'About', 'url' => array('site/page', 'view' => 'about')), array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => array('site/logout'), 'visible' => !Yii::app() -> user -> isGuest)), )); ?>
+		<?php
+        if (Yii::app() -> params['bannerWidth']) {
+            $this -> widget('zii.widgets.CMenu', array('items' => array( array('label' => 'Home', 'url' => array('site/index')), array('label' => 'News', 'url' => array('post/index')), array('label' => 'Contact', 'url' => array('site/contact')), array('label' => 'About', 'url' => array('site/page', 'view' => 'about')), array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => array('site/logout'), 'visible' => !Yii::app() -> user -> isGuest)), ));
+        }
+		?>
 	</div><!-- mainmenu -->
 
 	<?php $this -> widget('zii.widgets.CBreadcrumbs', array('links' => $this -> breadcrumbs, )); ?><!-- breadcrumbs -->
@@ -34,9 +37,13 @@
 	<?php echo $content; ?>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by JohnnyMa.<br/>
+	    <!-- 
+		Copyright &copy; <?php echo date('Y'); ?> by JohnnyMa.
+		-->
+		<?php echo Yii::app()->params['copyrightInfo'] ?>
+		<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?> & 
+		<?php echo Yii::powered(); ?>
 		<?php echo Yii::authorLink(); ?>
 	</div><!-- footer -->
 
