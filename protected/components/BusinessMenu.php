@@ -11,11 +11,7 @@ class BusinessMenu extends CPortlet {
     }
 
     protected function renderContent() {
-        var_dump($this -> blockContent);
-        die ;
-
         if (Yii::app() -> params['displayBusinessMenuBlock'])
             $this -> render('businessMenu');
     }
-
 }

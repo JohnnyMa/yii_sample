@@ -11,6 +11,7 @@ body {
   margin-bottom: 5px;
   background: white;
   border: 1px solid #C9E0ED;
+  width: 80%;
 }
 
 #header {
@@ -246,3 +247,35 @@ div.breadcrumbs span {
 .comment .pending {
   color: red;
 }
+
+/***************** style for menu list *****************************************/
+.businessMenu {
+  width: 216px;
+}
+
+dl#detail-menu-list {
+  width: 200px;
+  color: red;
+}
+
+dl#detail-menu-list dt {
+  height: 25px;
+  border: 1px solid blue;
+  padding-left: 10px;
+}
+
+dl#detail-menu-list dd {
+  margin-bottom: 10px;
+}
+
+dl#detail-menu-list dd ul {
+  overflow: hidden;
+}
+
+dl#detail-menu-list ul li {
+  float: left;
+  width: 90px;
+}
+
+
+
