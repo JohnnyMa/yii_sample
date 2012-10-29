@@ -259,9 +259,8 @@ dl#detail-menu-list {
 }
 
 dl#detail-menu-list dt {
-  height: 25px;
   border: 1px solid blue;
-  padding-left: 10px;
+  padding: 5px;
 }
 
 dl#detail-menu-list dd {

@@ -1,6 +1,5 @@
 <?php
 $blockContent = Yii::app() -> params['BusinessMenuContent'];
-//var_dump($blockContent);
 
 $blockHtml = '<dl id="detail-menu-list">';
 foreach ($blockContent as $key => $item) {

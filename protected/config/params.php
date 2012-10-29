@@ -20,12 +20,12 @@ return array(
     //--------------------------------------------------------------------------------------
     //Below are configurations for customerized features.
     //options for banner in homepage
-    'displayBanner' => true,
+    'displayBanner' => false,
     'bannerWidth' => '400px',
     'bannerHeight' => '300px',
     
     //options for business menus block
-    'displayBusinessMenuBlock' => 'true',
+    'displayBusinessMenuBlock' => true,
     //content style: title -> (businessName -> businessLink)
     'BusinessMenuContent' => array('个人业务' => array('银行卡' => 'yinghangka.html',
                                                       '生活助手' => '',
