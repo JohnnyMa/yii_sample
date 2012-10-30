@@ -3,7 +3,7 @@
 // this contains the application parameters that can be maintained via GUI
 return array(
     // this is displayed in the header section
-    'title' => 'TinyBlog',
+    'title' => 'Demo',
     // this is used in error pages
     'adminEmail' => 'webmaster@example.com',
     // number of posts displayed per page
@@ -25,7 +25,7 @@ return array(
     'bannerHeight' => '300px',
     
     //options for business menus block
-    'displayBusinessMenuBlock' => true,
+    'displayBusinessMenuBlock' => false,
     //content style: title -> (businessName -> businessLink)
     'BusinessMenuContent' => array('个人业务' => array('银行卡' => 'yinghangka.html',
                                                       '生活助手' => '',
@@ -45,6 +45,14 @@ return array(
                                                       '信息资讯' => ''),
                                    '金融市场业务' => array('企业服务产品' => ''),
                                    ),
+    
+    //options for login block
+    'displayLoginBlock' => true,
+
+    
+    
+    
+    
     
     //configurations for social widgets
     'displayWeibo' => true,

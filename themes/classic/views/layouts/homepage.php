@@ -6,6 +6,11 @@
     <div class="businessMenu">
         <?php $this -> widget('BusinessMenu'); ?>
     </div>
+    
+    <div id="login-block">
+        <?php $this -> widget('LoginBlock'); ?>
+    </div>
+
     <div id="content">
         <div class="news_list"><?php echo $content; ?></div>
         <div id="calendar"><?php //$this -> widget('SocialWidget'); ?></div>

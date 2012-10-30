@@ -276,5 +276,9 @@ dl#detail-menu-list ul li {
   width: 90px;
 }
 
+/***************** style for login block *****************************************/
+#login-block {
+  width: 200px;
+}
 
 
